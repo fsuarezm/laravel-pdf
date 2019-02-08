@@ -1,6 +1,6 @@
 {
     "name": "fsuarezm/laravel-pdf",
-    "description": "Rosodf for Laravel",
+    "description": "Rospdf for Laravel",
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -12,6 +12,11 @@
     "autoload": {
         "psr-4": {
             "Pdf\\Laravel\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Pdf\\Laravel\\Tests\\": "tests/"
         }
     },
     "require": {
@@ -28,14 +33,14 @@
             "/tests"
         ]
     },
-    "autoload-dev": {
-        "psr-4": {
-            "Pdf\\Laravel\\Tests\\": "tests/"
-        }
-    },
     "extra": {
         "laravel": {
-            "dont-discover": []
+            "providers": [
+                "Pdf\\Laravel\\PdfServiceProvider"
+            ],
+            "aliases": {
+                "Pdf": "Pdf\\Laravel\\Facades\\Pdf"
+            }
         }
     },
     "minimum-stability": "dev",

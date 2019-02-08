@@ -32,5 +32,12 @@ class PdfServiceProvider extends ServiceProvider
 
     public function register()
     {
+        $this->app->bind('laravel-pdf', function() {
+            return Pdf::create();
+        });
+
+        $this->app->bind(Pdf::class, function () {
+            return Pdf::create();
+        })
     }
 }
