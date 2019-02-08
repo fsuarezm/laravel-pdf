@@ -47,8 +47,8 @@ return [
         | Default is a string. For many lines set an array.
         | Example:
         |   "main"         => [
-        |       ["text" => "SEPE Barcelona", "font_size" => 12],
-        |       ["text" => "Dirección Provincial", "font_size" => 10],
+        |       ["text" => "Line header 1"],
+        |       ["text" => "Line header 2", "font_size" => 10],
         |   ],
         |
         */
