@@ -2,14 +2,12 @@
 /**
  * Este fichero forma parte de la aplicación laravel-pdf
  *
- * @copyrigth 2019 Francisco Suárez Mulero <francisco.suarez@sepe.es>
- * @copyrigth Servicio Público de Empleo Estatal
- * @copyrigth UCI Barcelona
+ * @copyrigth 2019 Francisco Suárez Mulero <fsuarezm@gmail.com>
  *
  * @license For the full copyright and license information, please view
  * the LICENSE file that was distributed with this source code.
  *
- * @author Francisco Suárez Mulero <francisco.suarez@sepe.es>
+ * @author Francisco Suárez Mulero <fsuarezm@gmail.com>
  */
 
 namespace Pdf\Laravel\Facades;
