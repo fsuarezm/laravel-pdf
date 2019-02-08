@@ -225,11 +225,11 @@ class Pdf extends \Cezpdf
         if (is_array($config['main'])) {
             $y = $this->ez['pageHeight'] - 5;
             foreach ($config['main'] as $line) {
-                $y = $y - $this->getFontHeight(isset($line['font_size']) ? $line['font_size'] : $config['main']['font_size']);
+                $y = $y - $this->getFontHeight(array_key_exists('font_size', $line) ? $line['font_size'] : $config['font_size']);
                 $this->addText(
                     20,
                     $y,
-                    isset($line['font_size']) ? $line['font_size'] : $config['main']['font_size'],
+                    array_key_exists('font_size', $line) ? $line['font_size'] : $config['font_size'],
                     $line['text'],
                     $this->ez['pageWidth'] - 40,
                     $config['align']
@@ -239,8 +239,8 @@ class Pdf extends \Cezpdf
         else {
             $this->addText(
                 20,
-                $this->ez['pageHeight'] - $this->getFontHeight($this->ez['fontSize']) - 5,
-                $config['main']['font_size'],
+                $this->ez['pageHeight'] - $this->getFontHeight($config['font_size']) - 5,
+                $config['font_size'],
                 $config['main'],
                 $this->ez['pageWidth'] - 40, $this->config['header']['align']
             );
