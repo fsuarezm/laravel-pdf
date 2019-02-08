@@ -20,6 +20,14 @@ class PdfServiceProvider extends ServiceProvider
 {
     public function boot()
     {
+        $config = __DIR__.'/config/rospdf.php';
+
+        $this->publishes(
+            [$config => config_path('rospdf.php')],
+            'rospdf'
+        );
+
+        $this->mergeConfigFrom($config, 'rospdf.php');
     }
 
     public function register()

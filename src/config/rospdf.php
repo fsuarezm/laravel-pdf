@@ -65,7 +65,7 @@ return [
         |
         */
         "image"        => [
-            "path"  => "",
+            "path"  => "path/to/image.jpg",     // gif | jpeg | jpg | png
             "align" => "left"
         ]
     ],
@@ -81,6 +81,7 @@ return [
     "footer" => [
         "page_numbers" => true,                 // page numbers in footer
         "main"         => "Footer text",        // footer text
+        "font_size"    => 12,                   // font size for main text
         "align"        => "left",               // align footer
     ]
 ];
