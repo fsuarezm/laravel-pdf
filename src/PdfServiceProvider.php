@@ -38,6 +38,6 @@ class PdfServiceProvider extends ServiceProvider
 
         $this->app->bind(Pdf::class, function () {
             return Pdf::create();
-        })
+        });
     }
 }
